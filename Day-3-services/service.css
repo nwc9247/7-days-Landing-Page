@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #6C5CE7;
+    --secondary-color: #636177;
+    --shadow-soft: rgba(0, 0, 0, 0.2);
+    --shadow-strong: rgba(0, 0, 0, 0.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.services {
+    text-align: center;
+    margin-top: 50px;
+    padding: 80px 20px;
+    background: #f9f9f9;
+
+}
+
+.services h2 {
+    /* clamp(minimum, preferred, maximum) */
+    font-size: clamp(30px, 5vw, 42px);
+    font-weight: 600;
+    margin-bottom: 2.5em;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 45px;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 30px;
+    box-shadow: 0 8px 18px var(--shadow-soft);
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px var(--shadow-strong);
+
+}
+
+.service-card:active {
+    border: 2px solid var(--secondary-color);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.35s ease;
+
+}
+
+.service-card img:hover {
+    transform: scale(1.05);
+}
+
+.service-card .contents {
+    padding: 25px 20px 35px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+
+.service-card .contents h3 {
+    color: var(--primary-color);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.service-card .contents p {
+    font-size: 16px;
+    color: var(--secondary-color);
+    line-height: 1.5;
+    margin-bottom: 20px;
+
+}
+
+.service-card .contents a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease-in;
+    display: inline-block;
+}
+
+.service-card .contents a:hover {
+    text-decoration: underline;
+    transform: translateY(4px);
+}
+
+@media (max-width: 600px) {
+    .services {
+        padding: 60px 15px;
+    }
+
+    .service-grid {
+        gap: 15px;
+    }
+}

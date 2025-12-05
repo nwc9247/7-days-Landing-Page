@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.pricing {
+    text-align: center;
+    margin: 25px 10px;
+    padding: 80px 20px;
+    background: #EFE9E3;
+}
+
+.pricing h2 {
+    font-size: clamp(30px, 5vw, 42px);
+    margin-bottom: 2em;
+}
+
+.pricing-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+.pricing-card {
+    padding: 25px 15px;
+    border-radius: 12px;
+    background-color: #eee9e5;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.39);
+
+}
+
+.pricing-card h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.pricing-card .price {
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.pricing-card .price span {
+    font-size: 16px;
+    color: rgb(102, 99, 99);
+}
+
+.pricing-card ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0 10px;
+    line-height: 1.9;
+
+}
+
+.pricing-card ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.pricing-card ul li::before {
+    content: "\2714";
+    font-weight: 700;
+    width: 15px;
+    height: 22px;
+    padding: 0 8px 0 0;
+    font-size: 15px;
+}
+
+.pricing-card #plan-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #e7c69c;
+    color: purple;
+    border-radius: 11px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .2s ease;
+}
+
+.pricing-card #plan-btn:hover {
+    background-color: #eed2b7;
+}
+
+.pricing-card #plan-btn:focus {
+    background-color: white;
+    outline: 2px solid purple;
+
+}
